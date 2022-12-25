@@ -136,7 +136,7 @@ section .title::after{
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto Slab', serif;
-    align-items: center;
+    align-items: flex-end;
 }
 .home .max-width{
   width: 100%;
@@ -165,9 +165,21 @@ section .title::after{
     justify-content: start;
 }
 .home .home-content .text-3 span{
-    color: var(--color-4);
-    font-weight: 500;
+    color: var(--color-2);
+    font-weight: 600;
 }
+@media screen and (max-width: 600px) {
+  .home .home-content .text-1{
+    font-size: 18px;
+  }
+  .home .home-content .text-2{
+    font-size: 29px;
+  }
+  .home .home-content .text-3{
+    font-size: 18px;
+  }
+ }
+
 
 /* about */
 
@@ -481,18 +493,25 @@ section .title::after{
     width: 100%;
   }
   
-  .contact .row .column{
+  .contact .row .column4{
     display: flex;
-    width: 50%;
+    width: 30%;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
     flex-direction: column;
   }
-  
-  .contact .column .card{
+  .contact .row .column5{
+    display: flex;
+    width: 70%;
+    margin: 30px;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .contact .column4 .card{
     background: #fff;
-    width: 200px;
+    width: 180px;
     margin: 20px;
     padding: 20px;
     display: flex;
@@ -503,29 +522,29 @@ section .title::after{
     border-radius: 10px;
   }
   
-  .contact .column .card .contact-icon{
+  .contact .column4 .card .contact-icon{
     color: var(--color-4);
     font-size: 4em;
     text-align: center;
     transition: transform 0.5s ease;
   }
   
-  .contact .column .card:hover .contact-icon{
+  .contact .column4 .card:hover .contact-icon{
     transform: translateY(-10px);
   }
   
-  .contact .column .card .info{
+  .contact .column4 .card .info{
     text-align: center;
   }
   
-  .contact .column .card .info h3{
+  .contact .column4 .card .info h3{
     color: #111;
     font-size: 1.2em;
     font-weight: 600;
     margin: 10px;
   }
   
-  .contact .column .card .info span{
+  .contact .column4 .card .info span{
     color: #666;
     font-weight: 500;
   }
@@ -533,7 +552,10 @@ form{
     display: flex;
     flex-direction: column;
   }
-
+label{
+  font-size: large;
+  color: var(--color-4);
+}
 input[type=text], input[type=email],select, textarea {
     width: 100%;
     padding: 12px;
@@ -566,6 +588,8 @@ input[type=text], input[type=email],select, textarea {
   }
  /*footer*/
  .footer{
+  display: flex;
+  flex-direction: column;
   background: var(--color-4);
   padding:30px 0px;
   font-family: 'Play', sans-serif;
@@ -606,6 +630,7 @@ input[type=text], input[type=email],select, textarea {
   
   @media (max-width:720px){
   .footer{
+  justify-content: space-around;
   text-align:left;
   padding:5%;
   }
