@@ -35,7 +35,7 @@ html{
 }
 
 section{
-    padding: 100px 0;
+    padding: 60px 0;
 
 }
 .max-width{
@@ -218,11 +218,15 @@ section .title::after{
 }
 .items p{
   display: flex;
+  margin-top: 30px;
   margin-left: 20px;
 }
 .itemimg{
     width:50px;
     height: 50px;
+}
+.row1{
+  display: flex;
 }
 .row1:after{
     content: "";
@@ -230,6 +234,12 @@ section .title::after{
     clear: both;
 }
 .column1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-3);
+    margin: 4px;
     float: left;
     width: 33.33%;
     padding: 10px;
@@ -238,6 +248,9 @@ section .title::after{
 }
 @media screen and (max-width: 600px) {
     .about-content{
+      flex-direction: column;
+    }
+    .row1{
       flex-direction: column;
     }
     .column1 {
@@ -602,18 +615,18 @@ input[type=text], input[type=email],select, textarea {
   width:100%;
   margin:1% 0%;
   padding:0.6% 0%;
-  color:gray;
+  color:var(--color-1);
   font-size:1em;
   }
   
   .footer .rowf a{
   text-decoration:none;
-  color:gray;
+  color:var(--color-1);
   transition:0.5s;
   }
   
   .footer .rowf a:hover{
-  color:#fff;
+  color:var(--color-2);
   }
   
   .footer .rowf ul{
