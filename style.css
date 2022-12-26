@@ -109,13 +109,13 @@ section .title::after{
 @media screen and (max-width: 800px) {
     .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
-      float: left;
+      float: right;
       display: flex;
     }
 }
   
 @media screen and (max-width: 800px) {
-    .navbar.responsive {position: relative;}
+    .navbar.responsive {position: sticky;}
     .navbar.responsive .icon {
       position: absolute;
       right: 0;
